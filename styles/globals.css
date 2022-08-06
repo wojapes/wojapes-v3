@@ -36,3 +36,11 @@ model-viewer {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+
+.align-baseline {
+  align-items: baseline;
+}
+
+.scale {
+  scale: .85;
+}
