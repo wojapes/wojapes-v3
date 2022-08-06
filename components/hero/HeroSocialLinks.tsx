@@ -139,6 +139,8 @@ const HeroSocialLinks: FC<Props> = ({ collection }) => {
             />
           </a>
         )}
+        
+        {/*
         <a
           className="flex-none text-black dark:text-white"
           target="_blank"
@@ -146,7 +148,9 @@ const HeroSocialLinks: FC<Props> = ({ collection }) => {
           href={social.etherscanUrl}
         >
           <img src={etherscanLogo} alt="Etherscan Icon" className="h-6 w-6" />
-        </a>
+        </a> 
+        */}
+
         {typeof social.externalUrl === 'string' && (
           <a
             className="flex-none text-black dark:text-white"
@@ -156,6 +160,7 @@ const HeroSocialLinks: FC<Props> = ({ collection }) => {
           >
             <FiGlobe className="h-6 w-6" />
           </a>
+          
         )}
       </div>
     )

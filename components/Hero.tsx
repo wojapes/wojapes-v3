@@ -172,16 +172,20 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
   return (
     <>
       <HeroBackground banner={header.banner}>
-        <div className="z-10 flex w-full flex-col items-center gap-6">
+        <div className="z-10 flex flex-col gap-3">
+          <div className="flex gap-4" >
           <img
-            className="h-20 w-20 rounded-full"
+            className=" h-20 w-20 rounded-[6px]"
             alt={`${header.name} Logo`}
             src={header.image}
           />
-          <h1 className="reservoir-h4 text-center text-black dark:text-white">
+          <div>
+          <h1 className="reservoir-h4 text-left text-black dark:text-white">
             {header.name}
           </h1>
-          <HeroSocialLinks collection={collection?.data?.collection} />
+          <a href="https://etherscan.io/address/0xD2d6b889468E261Aa7e1586fFcECA338F1D7D104"><p>0xD2d6...D104 ↗︎</p></a>
+          </div>
+          </div>
           <HeroStats stats={statsObj} />
           {header.description && (
             <>
@@ -191,7 +195,7 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
               >
                 <p
                   ref={descriptionRef}
-                  className="text-center text-sm text-[#262626] transition-[width] duration-300 ease-in-out dark:text-white"
+                  className="text- text-sm text-[#262626] transition-[width] duration-300 ease-in-out dark:text-white"
                 >
                   <ReactMarkdown linkTarget="_blank">
                     {header.description}
@@ -216,7 +220,9 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
               )}
             </>
           )}
-          <div className="flex w-full flex-col justify-center gap-4 md:flex-row">
+          <HeroSocialLinks collection={collection?.data?.collection}/>
+
+          <div className="flex w-full flex-col gap-4 md:flex-row">
             {isSupported &&
               (isAttributeModal ? (
                 <AttributeOfferModal
@@ -249,6 +255,7 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
           </div>
         </div>
       </HeroBackground>
+      
     </>
   )
 }

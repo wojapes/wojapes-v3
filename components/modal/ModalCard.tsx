@@ -50,7 +50,7 @@ const ModalCard: FC<Props> = ({
         <div className="px-5">
           <div
             className={`mx-auto overflow-hidden border border-neutral-300 bg-white p-11 shadow-xl dark:border-neutral-600 dark:bg-black md:w-[510px] ${
-              DISABLE_POWERED_BY_RESERVOIR ? ' rounded-2xl' : ' rounded-t-2xl'
+              DISABLE_POWERED_BY_RESERVOIR ? ' rounded-2xl' : ' rounded-2xl'
             }`}
           >
             <div className="mb-4 flex items-center justify-between">
@@ -93,25 +93,6 @@ const ModalCard: FC<Props> = ({
               </div>
             )}
           </div>
-          {!DISABLE_POWERED_BY_RESERVOIR && (
-            <div className="mx-auto flex items-center justify-center rounded-b-2xl bg-neutral-100 py-4 dark:bg-neutral-800 md:w-[510px]">
-              <Link href="https://reservoirprotocol.github.io/">
-                <a
-                  className="reservoir-tiny flex gap-2 dark:text-white"
-                  target="_blank"
-                >
-                  Powered by{' '}
-                  <img
-                    src={
-                      !!DARK_MODE
-                        ? `/reservoir_watermark_dark.svg`
-                        : `/reservoir_watermark_light.svg`
-                    }
-                  />
-                </a>
-              </Link>
-            </div>
-          )}
         </div>
       </div>
     </Dialog.Content>
