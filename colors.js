@@ -157,8 +157,8 @@ const primaryColors = {
     100: '#F1E5FF',
     300: '#E2CCFF',
     500: '#A966FF',
-    700: '#7000FF',
-    900: '#430099',
+    700: 'rgb(32, 129, 226)', //this is the default primary color value
+    900: 'rgb(55, 148, 240)', //this is the button hover color value
   },
 }
 
