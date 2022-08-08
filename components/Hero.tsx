@@ -173,18 +173,20 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
     <>
       <HeroBackground banner={header.banner}>
         <div className="z-10 flex flex-col gap-3">
-          <div className="flex gap-4" >
-          <img
-            className=" h-20 w-20 rounded-[6px]"
-            alt={`${header.name} Logo`}
-            src={header.image}
-          />
-          <div>
-          <h1 className="reservoir-h4 text-left text-black dark:text-white">
-            {header.name}
-          </h1>
-          <a href="https://etherscan.io/address/0xD2d6b889468E261Aa7e1586fFcECA338F1D7D104"><p>0xD2d6...D104 ↗︎</p></a>
-          </div>
+          <div className="flex gap-4">
+            <img
+              className=" h-20 w-20 rounded-[6px]"
+              alt={`${header.name} Logo`}
+              src={header.image}
+            />
+            <div>
+              <h1 className="reservoir-h4 text-left text-black dark:text-white">
+                {header.name}
+              </h1>
+              <a href="https://etherscan.io/address/0xD2d6b889468E261Aa7e1586fFcECA338F1D7D104">
+                <p>0xD2d6...D104 ↗︎</p>
+              </a>
+            </div>
           </div>
           <HeroStats stats={statsObj} />
           {header.description && (
@@ -193,14 +195,14 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
                 className="relative overflow-hidden transition-[max-height] ease-in-out md:w-[423px]"
                 style={{ maxHeight: descriptionHeight }}
               >
-                <p
+                <div
                   ref={descriptionRef}
                   className="text- text-sm text-[#262626] transition-[width] duration-300 ease-in-out dark:text-white"
                 >
                   <ReactMarkdown linkTarget="_blank">
                     {header.description}
                   </ReactMarkdown>
-                </p>
+                </div>
               </div>
               {isLongDescription && (
                 <a
@@ -220,7 +222,7 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
               )}
             </>
           )}
-          <HeroSocialLinks collection={collection?.data?.collection}/>
+          <HeroSocialLinks collection={collection?.data?.collection} />
 
           <div className="flex w-full flex-col gap-4 md:flex-row">
             {isSupported &&
@@ -255,7 +257,6 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
           </div>
         </div>
       </HeroBackground>
-      
     </>
   )
 }
