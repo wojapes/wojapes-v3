@@ -18,3 +18,4 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_WOJAPES_9DCF0 }}'
           channelId: live
           projectId: wojapes-9dcf0
+          only: hosting:openpee
