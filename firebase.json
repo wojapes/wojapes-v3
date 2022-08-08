@@ -1,7 +1,7 @@
 {
   "hosting": {
     "site": "openpee",
-    "public": "/",
+    "public": "out",
     "cleanUrls": true,
     "ignore": [
       "firebase.json",
