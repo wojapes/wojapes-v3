@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "next dev",
     "prettier": "prettier --write .",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
