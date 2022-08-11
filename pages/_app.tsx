@@ -114,6 +114,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       )
     }
     console.log(PROXY_API_BASE)
+    console.log(window.location.origin)
   }, [defaultTheme])
 
   return (
