@@ -97,7 +97,7 @@ const Index: NextPage<Props> = ({ collectionId, tokenDetails }) => {
     openSeaBaseUrl
   )
 
-  console.log('-->', collection, contract, tokenId)
+  console.log('--> Contract/TokenId', collection, contract, tokenId)
 
   useEffect(() => {
     async function getOpenSeaData(url: URL) {

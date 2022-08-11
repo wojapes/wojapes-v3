@@ -79,6 +79,8 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
 
   const attributes = useAttributes(id)
 
+  console.log('--> Collections', tokens, collectionAttributes)
+
   if (!CHAIN_ID) return null
 
   if (tokens.error) {
