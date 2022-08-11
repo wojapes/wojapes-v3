@@ -18,7 +18,7 @@ export const GlobalContext = createContext<{
 
 export const GlobalProvider: FC = ({ children }) => {
   const [state, dispatch] = useReducer(Reducer, initialState)
-
+  console.log('--> Global Provider')
   return (
     <GlobalContext.Provider value={{ state, dispatch }}>
       {children}

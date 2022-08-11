@@ -15,6 +15,8 @@ type Props = {
 const AnalyticsProvider: FC<Props> = ({ children }) => {
   const accountData = useAccount()
 
+  console.log('--> Analytics Provider', accountData)
+
   useEffect(() => {
     if (accountData) {
       datadogRum.setUser({
