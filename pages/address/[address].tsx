@@ -65,8 +65,6 @@ const Address: NextPage<Props> = ({ address, fallback }) => {
   const sellPositions = useUserAsks([], address, collections)
   const buyPositions = useUserBids([], address, collections)
 
-  console.log('--> Address', collections, sellPositions, buyPositions)
-
   if (!CHAIN_ID) {
     console.debug({ CHAIN_ID })
     return <div>There was an error</div>

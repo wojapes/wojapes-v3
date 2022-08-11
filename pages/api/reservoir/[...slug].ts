@@ -27,8 +27,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     endpoint = slug.join('/')
   }
 
-  console.log('--> api reservoir', endpoint, RESERVOIR_API_BASE)
-
   // Construct the API url: `https://api.reservoir.tools/{endpoint}/{query-string}`
   const url = new URL(endpoint, RESERVOIR_API_BASE)
 

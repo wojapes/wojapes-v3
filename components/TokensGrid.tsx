@@ -58,9 +58,6 @@ const TokensGrid: FC<Props> = ({ tokens, viewRef, collectionImage }) => {
 
   const isInTheWrongNetwork = Boolean(signer && activeChain?.id !== +CHAIN_ID)
 
-  console.log('==>', isLoadingInitialData)
-  console.log('==>', mappedTokens)
-
   return (
     <Masonry
       key="tokensGridMasonry"
