@@ -97,6 +97,8 @@ const Index: NextPage<Props> = ({ collectionId, tokenDetails }) => {
     openSeaBaseUrl
   )
 
+  console.log('-->', collection, contract, tokenId)
+
   useEffect(() => {
     async function getOpenSeaData(url: URL) {
       let result: any = { animation_url: null, extension: null }
@@ -180,7 +182,7 @@ const Index: NextPage<Props> = ({ collectionId, tokenDetails }) => {
           token={token?.token}
           collection={collection.data?.collection}
         />
-                <Owner details={details} bannedOnOpenSea={bannedOnOpenSea} />
+        <Owner details={details} bannedOnOpenSea={bannedOnOpenSea} />
 
         <Listings asks={asks} />
       </div>
